@@ -8,9 +8,11 @@ package by.exercise4;
 
 import by.common.exercise4.Calculate;
 
+import java.math.BigInteger;
+
 public class Main {
     public static void main(String[] args) {
-        long result = new Calculate().sumAndMultiply(100000000,-20000000);
+        BigInteger result = new Calculate().sumAndMultiply(100_000_000,-20_000_000);
         System.out.println(result);
     }
 }
