@@ -11,7 +11,7 @@ package by.exercise10;
 
  public class Main {
     public static void main(String[] args) {
-        AreaData arguments = new AreaData(99.0,20.0,30.0,40.0,100.0,30.0);
+        AreaData arguments = new AreaData(99.0,20.0,30.0,40.0,100.0,300.0);
         boolean check = new CalcSquare().checkSquare(arguments);
         new OutData().outCheckSquare(check);
     }

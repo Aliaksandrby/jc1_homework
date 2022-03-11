@@ -64,6 +64,62 @@ public class Array {
         return max;
     }
 
+    public int findMinElOfArray() {
+        int min = arrayInt[0];
+        for (int i = 0; i < this.arrayInt.length; i++) {
+            if(min > arrayInt[i]) {
+                min = arrayInt[i];
+            }
+        }
+        return min;
+    }
+
+    public int numberElInArray(int value) {
+        int count = 0;
+        for (int i = 0; i < this.arrayInt.length; i++) {
+            if(value == arrayInt[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int findIndexEl(int value) {
+        int i;
+        for (i = 0; i < this.arrayInt.length; i++) {
+            if(value == arrayInt[i]) {
+                break;
+            }
+        }
+        return i;
+    }
+
+    // if number of elements min and max equals 1
+    public String sumElBetweenMaxAndMin(int max, int min) {
+        Integer sum = 0;
+        String strSum = "";
+        if((numberElInArray(min) == 1) && (numberElInArray(max) == 1)) {
+            if(findIndexEl(max) < findIndexEl(min)) {
+                sum = sumBetweenEl(findIndexEl(max), findIndexEl(min));
+            } else {
+                sum = sumBetweenEl(findIndexEl(min), findIndexEl(max));
+            }
+            strSum = sum.toString();
+        } else {
+            strSum = "lots of min or max elements";
+        }
+        return strSum;
+    }
+
+    private int sumBetweenEl(int el1, int el2) {
+        int sum = 0;
+        for (int i = el1+1; i < el2; i++) {
+            sum += getArray()[i];
+        }
+        return sum;
+    }
+
+
     public String outIndexesElOfArray(int element) {
         String index = "";
         for (int i = 0; i < arrayInt.length; i++) {

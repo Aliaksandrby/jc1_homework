@@ -10,7 +10,7 @@ import by.common.exercise11.DealWeek;
 public class Main {
     public static void main(String[] args) {
         DealWeek dealWeek = new DealWeek();
-        String out = dealWeek.deal(8);
+        String out = dealWeek.deal(5);
         System.out.println(out);
     }
 }
