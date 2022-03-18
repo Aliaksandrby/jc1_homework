@@ -183,4 +183,12 @@ public class Array {
     public String lastElementOfArray() {
         return arrayInt[arrayInt.length-1] + " - it's the last element of our array";
     }
+
+    public static int[] shift(int[] array) {
+        int[] newArray = new int[array.length-1];
+        for (int i = 0; i < newArray.length; i++) {
+            newArray[i] = array[i+1];
+        }
+        return newArray;
+    }
 }
