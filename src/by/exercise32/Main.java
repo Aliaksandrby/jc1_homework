@@ -12,18 +12,19 @@ import by.exercise32.appliance.kitchen.device.*;
 public class Main {
 
     public static void main(String[] args) {
-        Appliance appliance;
 
-        appliance = new CoffeeMachine("Philips","coffee machine");
-        appliance.turnOn();
-        System.out.println(appliance);
 
-        appliance = new Microwave("Samsung","microwave");
-        //appliance.turnOn();
-        System.out.println(appliance);
+        CoffeeMachine coffeeMachine = new CoffeeMachine("Philips","coffee machine",
+                "red");
+        coffeeMachine.turnOn();
+        coffeeMachine.setVolume(2);
+        coffeeMachine.makeCoffee();
 
-        appliance = new Refrigerator("LG","refrigerator");
-        appliance.turnOn();
-        System.out.println(appliance);
+        Microwave microwave = new Microwave("Samsung","microwave","white",
+                20,30);
+       // microwave.turnOn();
+        microwave.setFood("some food");
+        microwave.warmingFood();
+
     }
 }
