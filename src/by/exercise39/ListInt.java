@@ -48,7 +48,7 @@ public class ListInt {
             Integer element = intIterator.next();
             int count = 0;
             for (int i = 0; i < list.size(); i++) {
-                if(element == list.get(i)) {
+                if(element.equals(list.get(i))) {
                     count++;
                 }
                 if(count > 1) {
