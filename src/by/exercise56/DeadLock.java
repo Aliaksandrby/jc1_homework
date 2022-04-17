@@ -4,7 +4,6 @@ public class DeadLock {
     private final SomeObject object1;
     private final SomeObject object2;
     private final SomeObject object3;
-    private final String showOut = "To do something";
 
     public DeadLock() {
         this.object1 = new SomeObject("object 1");
